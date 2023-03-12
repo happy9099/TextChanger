@@ -7,7 +7,7 @@ function App() {
     <>
       <Navbar title = "TextChanger" />
       {/* <Navbar/> */}
-      <div className="container my-3">
+      <div className="container my-4">
       <TextForm heading = "Enter the text to analyze"/>
       </div>
     </>
