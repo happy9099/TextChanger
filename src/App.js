@@ -23,7 +23,20 @@ function App() {
 
   }
 
-  const toggleMode = () => {
+  const removeBodyClasses= () => {
+    document.body.classList.remove('bg-light')
+    document.body.classList.remove('bg-dark')
+    document.body.classList.remove('bg-danger')
+    document.body.classList.remove('bg-warning')
+    document.body.classList.remove('bg-success')
+    document.body.classList.remove('bg-primary')
+    // document.body.classList.remove('bg-secondary')
+
+  }
+
+  const toggleMode = (cls) => {
+    removeBodyClasses();
+    document.body.classList.add('bg-'+cls) 
     if (mode === 'light') {
       setMode('dark');
       document.body.style.backgroundColor = '#002040';
@@ -55,8 +68,8 @@ function App() {
       <Alert alert={alert}/>
       {/* <Navbar/> */}
       <div className="container my-4">
-        <TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode}/>
-        {/* <About/> */}
+        <TextForm showAlert={showAlert} heading="TextChanger" mode={mode}/>
+        {/* <About mode={mode} /> */}
       </div>
     </>
   );
