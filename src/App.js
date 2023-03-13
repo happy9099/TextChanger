@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import './App.css';
 import Alert from './components/Alert';
-// import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 
@@ -68,8 +67,7 @@ function App() {
       <Alert alert={alert}/>
       {/* <Navbar/> */}
       <div className="container my-4">
-        <TextForm showAlert={showAlert} heading="TextChanger" mode={mode}/>
-        {/* <About mode={mode} /> */}
+        <TextForm showAlert={showAlert} heading="TextChanger --> The way you think" mode={mode}/>
       </div>
     </>
   );
